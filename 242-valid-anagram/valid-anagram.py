@@ -8,16 +8,14 @@ class Solution(object):
         len_s = len(s)
         len_t = len(t)
 
-        sorted_s = sorted(s.lower())
-        sorted_t = sorted(t.lower())
+        sorted_s = ''.join(sorted(s.lower()))
+        sorted_t = ''.join(sorted(t.lower()))
 
         if len_s != len_t or len_s == 0 or len_t == 0:
             return False
         
-        for i in range(0,len_s):
-            if sorted_s[i] != sorted_t[i]:
-                return False
-         
+        if sorted_s != sorted_t:
+                return False 
 
         return True
 
